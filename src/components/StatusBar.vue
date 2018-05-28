@@ -9,7 +9,7 @@
     <div class="oil">
       Oil Slick
       <div class="oil-status">
-        <span v-if="status.spikes">Ready</span>
+        <span v-if="status.oil">Ready</span>
         <span v-else>Filling Resevoir</span>
       </div>
     </div>

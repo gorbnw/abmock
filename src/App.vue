@@ -1,23 +1,21 @@
 <template>
   <div id="app">
-    <Header/>
-    <Status/>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderBar/>
+    <StatusBar/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Header from './components/Header.vue'
-import Status from './components/Status.vue'
+import HeaderBar from './components/HeaderBar.vue'
+import StatusBar from './components/StatusBar.vue'
 
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
-    Header,
-    Status
+    HeaderBar,
+    StatusBar,
+
   }
 }
 </script>
