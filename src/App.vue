@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <img src="./assets/logo.png">
+    <Status/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -9,12 +9,15 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
+import Status from './components/Status.vue'
+
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    Header
+    Header,
+    Status
   }
 }
 </script>
