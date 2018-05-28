@@ -2,12 +2,14 @@
   <div id="app">
     <HeaderBar/>
     <StatusBar/>
+    <BananaButton/>
   </div>
 </template>
 
 <script>
 import HeaderBar from './components/HeaderBar.vue'
 import StatusBar from './components/StatusBar.vue'
+import BananaButton from './components/BananaButton.vue'
 
 
 export default {
@@ -15,7 +17,7 @@ export default {
   components: {
     HeaderBar,
     StatusBar,
-
+    BananaButton,
   }
 }
 </script>
