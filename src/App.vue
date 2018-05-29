@@ -7,6 +7,7 @@
     <BananaButton v-on:tossBanana="this.store.updateBanana"/>
     <OilButton v-on:sprayOil="this.store.updateOil"/>
     <SpikesButton v-on:toggleSpikes="this.store.updateSpikes"/>
+    <EjectButton v-on:eject="this.store.ejectAlert"/>
   </div>
 </template>
 
@@ -16,6 +17,8 @@ import StatusBar from './components/StatusBar.vue'
 import BananaButton from './components/BananaButton.vue'
 import OilButton from './components/OilButton.vue'
 import SpikesButton from './components/SpikesButton.vue'
+import EjectButton from './components/EjectButton.vue'
+
 
 
 
@@ -27,6 +30,7 @@ export default {
     BananaButton,
     OilButton,
     SpikesButton,
+    EjectButton,
   },
   data() {
       return {
@@ -36,10 +40,10 @@ export default {
             isOilReady: true,
             isSpikesDeployed: false
           },
-          updateBanana: () =>{
+          updateBanana: () => {
             this.store.status.bananas -= 1;
           },
-          updateOil: () =>{
+          updateOil: () => {
             if(this.store.status.isOilReady){
               this.store.status.isOilReady = !this.store.status.isOilReady;
               setTimeout(()=>{
@@ -48,10 +52,13 @@ export default {
             } else {
             }
           },
-          updateSpikes: () =>{
+          updateSpikes: () => {
             let deployed = this.store.status.isSpikesDeployed;
             this.store.status.isSpikesDeployed = !deployed;
           },
+          ejectAlert: () => {
+            alert("EJECTED");
+          }
         }
       }
     }
