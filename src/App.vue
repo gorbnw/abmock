@@ -4,7 +4,7 @@
   <div id="app">
     <HeaderBar/>
     <StatusBar :status="this.store.status"/>
-    <BananaButton :bananas="this.store.status.bananas"/>
+    <BananaButton v-on:tossBanana="this.store.updateBanana"/>
   </div>
 </template>
 
@@ -27,6 +27,9 @@ export default {
             bananas: 234,
             isOilReady: false,
             isSpikesDeployed: false
+          },
+          updateBanana: () =>{
+            this.store.status.bananas -= 1;
           }
         }
       }
