@@ -6,6 +6,7 @@
     <StatusBar :status="this.store.status"/>
     <BananaButton v-on:tossBanana="this.store.updateBanana"/>
     <OilButton v-on:sprayOil="this.store.updateOil"/>
+    <SpikesButton v-on:toggleSpikes="this.store.updateSpikes"/>
   </div>
 </template>
 
@@ -14,6 +15,8 @@ import HeaderBar from './components/HeaderBar.vue'
 import StatusBar from './components/StatusBar.vue'
 import BananaButton from './components/BananaButton.vue'
 import OilButton from './components/OilButton.vue'
+import SpikesButton from './components/SpikesButton.vue'
+
 
 
 export default {
@@ -23,6 +26,7 @@ export default {
     StatusBar,
     BananaButton,
     OilButton,
+    SpikesButton,
   },
   data() {
       return {
@@ -43,7 +47,11 @@ export default {
               }, 3000);
             } else {
             }
-          }
+          },
+          updateSpikes: () =>{
+            let deployed = this.store.status.isSpikesDeployed;
+            this.store.status.isSpikesDeployed = !deployed;
+          },
         }
       }
     }
