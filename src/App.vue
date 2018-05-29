@@ -1,22 +1,39 @@
+
+
 <template>
   <div id="app">
     <HeaderBar/>
-    <StatusBar/>
+    <StatusBar :status="this.store.status"/>
+    <BananaButton v-on:tossBanana="this.store.updateBanana"/>
   </div>
 </template>
 
 <script>
 import HeaderBar from './components/HeaderBar.vue'
 import StatusBar from './components/StatusBar.vue'
-
+import BananaButton from './components/BananaButton.vue'
 
 export default {
   name: 'app',
   components: {
     HeaderBar,
     StatusBar,
-
-  }
+    BananaButton,
+  },
+  data() {
+      return {
+        store: {
+          status: {
+            bananas: 234,
+            isOilReady: false,
+            isSpikesDeployed: false
+          },
+          updateBanana: () =>{
+            this.store.status.bananas -= 1;
+          }
+        }
+      }
+    }
 }
 </script>
 

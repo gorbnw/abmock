@@ -3,20 +3,20 @@
     <div class="bananas">
       Bananas Left
       <div class="bananas-status">
-        {{status.bananas}}
+        {{this.status.bananas}}
       </div>
     </div>
     <div class="oil">
       Oil Slick
       <div class="oil-status">
-        <span v-if="status.oil">Ready</span>
+        <span v-if="this.status.isOilReady">Ready</span>
         <span v-else>Filling Resevoir</span>
       </div>
     </div>
     <div class="spikes">
       Wheel Spikes
       <div class="spikes-status">
-        <span v-if="status.spikes">Deployed</span>
+        <span v-if="this.status.isSpikesDeployed">Deployed</span>
         <span v-else>Retracted</span>
       </div>
     </div>
@@ -27,14 +27,10 @@
 export default {
   name: 'Status',
   props: {
-  },
-  data(){
-    return {
-      status:{
-        bananas: 3,
-        oil: true,
-        spikes: false
-      }
+    status:{
+      bananas: Number,
+      isOilReady: Boolean,
+      isSpikesDeployed: Boolean,
     }
   },
   methods: {
