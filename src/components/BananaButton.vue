@@ -7,12 +7,13 @@
 <script>
 export default {
   name: 'BananaButton',
-  props: {
-  },
   methods: {
-    tossBanana: () =>{
-      alert("Banana Tossed");
+    tossBanana: () => {
+      alert("Banana tossed");
     }
+  },
+  props: {
+    bananas: Number
   }
 }
 </script>

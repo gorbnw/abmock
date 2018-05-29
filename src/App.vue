@@ -1,8 +1,10 @@
+
+
 <template>
   <div id="app">
     <HeaderBar/>
-    <StatusBar/>
-    <BananaButton/>
+    <StatusBar :status="this.store.status"/>
+    <BananaButton :bananas="this.store.status.bananas"/>
   </div>
 </template>
 
@@ -11,14 +13,24 @@ import HeaderBar from './components/HeaderBar.vue'
 import StatusBar from './components/StatusBar.vue'
 import BananaButton from './components/BananaButton.vue'
 
-
 export default {
   name: 'app',
   components: {
     HeaderBar,
     StatusBar,
     BananaButton,
-  }
+  },
+  data() {
+      return {
+        store: {
+          status: {
+            bananas: 234,
+            isOilReady: false,
+            isSpikesDeployed: false
+          }
+        }
+      }
+    }
 }
 </script>
 
