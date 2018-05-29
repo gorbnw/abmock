@@ -1,6 +1,9 @@
 <template>
   <div class="eject-button">
-    <span @click="$emit('eject')">EJECT</span>
+    <span @click="$emit('eject')">
+      <img src="../assets/eject-icon.png" alt="Eject Button Icon">
+      EJECT
+    </span>
   </div>
 </template>
 

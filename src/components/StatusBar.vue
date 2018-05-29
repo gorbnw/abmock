@@ -44,7 +44,6 @@ export default {
   .status {
     height: 50px;
     display: block;
-    font-size: 110%;
     padding: 0px;
     margin: auto;
   }
@@ -84,5 +83,6 @@ export default {
 
   .dash-label{
   font-size: 80%;
+  font-weight: normal;
   }
 </style>
