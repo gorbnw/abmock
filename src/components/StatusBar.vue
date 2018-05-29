@@ -1,20 +1,20 @@
 <template>
   <div class="status">
     <div class="bananas">
-      Bananas Left
+      <span class="dash-label">Bananas</span>
       <div class="bananas-status">
         {{this.status.bananas}}
       </div>
     </div>
     <div class="oil">
-      Oil Slick
+      <span class="dash-label">Oil Slick</span>
       <div class="oil-status">
         <span v-if="this.status.isOilReady">Ready</span>
         <span v-else>Filling Resevoir</span>
       </div>
     </div>
     <div class="spikes">
-      Wheel Spikes
+      <span class="dash-label">Wheel Spikes</span>
       <div class="spikes-status">
         <span v-if="this.status.isSpikesDeployed">Deployed</span>
         <span v-else>Retracted</span>
@@ -43,25 +43,46 @@ export default {
 
   .status {
     height: 50px;
-    display: grid;
+    display: block;
+    font-size: 110%;
+    padding: 0px;
+    margin: auto;
   }
   .bananas {
-    grid-column-start: 1;
+    width: 25%;
+    padding: 0px;
+    margin: auto;
+    display: inline-block;
+    /* grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-end: 1; */
   }
   .oil {
-    grid-column-start: 2;
+    width: 25%;
+    padding: 0px;
+    margin: auto;
+    display: inline-block;
+
+    /* grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-end: 1; */
 
   }
   .spikes {
-    grid-column-start: 3;
+    width: 25%;
+    padding: 0px;
+    margin: auto;
+    display: inline-block;
+
+    /* grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-end: 1; */
+  }
+
+  .dash-label{
+  font-size: 80%;
   }
 </style>

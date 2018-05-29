@@ -4,10 +4,12 @@
   <div id="app">
     <HeaderBar/>
     <StatusBar :status="this.store.status"/>
-    <BananaButton v-on:tossBanana="this.store.updateBanana"/>
-    <OilButton v-on:sprayOil="this.store.updateOil"/>
-    <SpikesButton v-on:toggleSpikes="this.store.updateSpikes"/>
-    <EjectButton v-on:eject="this.store.ejectAlert"/>
+    <div class="buttons">
+      <BananaButton v-on:tossBanana="this.store.updateBanana"/>
+      <OilButton v-on:sprayOil="this.store.updateOil"/>
+      <SpikesButton v-on:toggleSpikes="this.store.updateSpikes"/>
+      <EjectButton v-on:eject="this.store.ejectAlert"/>
+    </div>
   </div>
 </template>
 
@@ -76,4 +78,10 @@ body {
   padding: 0px;
   margin: 0px;
 }
+
+.buttons {
+  display: grid;
+  background-color: #F4EB20;
+}
+
 </style>

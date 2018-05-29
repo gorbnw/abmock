@@ -15,4 +15,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.eject-button{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
 </style>
