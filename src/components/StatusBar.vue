@@ -1,20 +1,20 @@
 <template>
   <div class="status">
     <div class="bananas">
-      Bananas Left
+      <span class="dash-label">Bananas</span>
       <div class="bananas-status">
         {{this.status.bananas}}
       </div>
     </div>
     <div class="oil">
-      Oil Slick
+      <span class="dash-label">Oil Slick</span>
       <div class="oil-status">
         <span v-if="this.status.isOilReady">Ready</span>
-        <span v-else>Filling Resevoir</span>
+        <span v-else>Refilling</span>
       </div>
     </div>
     <div class="spikes">
-      Wheel Spikes
+      <span class="dash-label">Wheel Spikes</span>
       <div class="spikes-status">
         <span v-if="this.status.isSpikesDeployed">Deployed</span>
         <span v-else>Retracted</span>
@@ -40,28 +40,34 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
   .status {
-    height: 50px;
-    display: grid;
+    background-color: white;
+    display: block;
+    height: 55px;
+    padding: 0px;
+    margin: auto;
+    max-width: 560px;
   }
   .bananas {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    display: inline-block;
+    margin: auto;
+    padding: 0px;
+    width: 30%;
   }
   .oil {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-
+    display: inline-block;
+    margin: auto;
+    padding: 0px;
+    width: 30%;
   }
   .spikes {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    display: inline-block;
+    margin: auto;
+    padding: 0px;
+    width: 30%;
+  }
+  .dash-label{
+  font-size: 80%;
+  font-weight: normal;
   }
 </style>
