@@ -2,7 +2,9 @@
   <div class="oil-button">
     <span @click="$emit('sprayOil')">
       <img src="../assets/oil-icon.png" alt="Oil Button Icon">
-      Spray Oil
+      <div class="button-label">
+        Spray Oil
+      </div>
     </span>
   </div>
 </template>
@@ -17,7 +19,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.oil-button{}
 
 </style>

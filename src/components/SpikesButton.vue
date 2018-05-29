@@ -2,7 +2,10 @@
   <div class="spikes-button">
     <span @click="$emit('toggleSpikes')">
       <img src="../assets/spikes-icon.png" alt="Spikes Button Icon">
-      Swap Spikes</span>
+      <div class="button-label">
+        Toggle Spikes
+      </div>
+    </span>
   </div>
 </template>
 

@@ -2,7 +2,9 @@
   <div class="banana-button">
     <span @click="$emit('tossBanana')">
       <img src="../assets/banana-icon.png" alt="Banana Button Icon">
-      Toss Banana
+      <div class="button-label">
+        Toss Banana
+      </div>
     </span>
   </div>
 </template>

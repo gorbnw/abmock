@@ -2,7 +2,9 @@
   <div class="eject-button">
     <span @click="$emit('eject')">
       <img src="../assets/eject-icon.png" alt="Eject Button Icon">
-      EJECT
+      <div class="button-label">
+        Eject
+      </div>
     </span>
   </div>
 </template>
@@ -24,5 +26,6 @@ export default {
   grid-row-start: 2;
   grid-row-end: 2;
 }
+
 
 </style>
